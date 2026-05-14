@@ -1,0 +1,147 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+  padding:20px;
+
+  background:linear-gradient(
+    135deg,
+    #74c0fc,
+    #63e6be
+  );
+}
+
+.container{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.card{
+  width:100%;
+  max-width:450px;
+
+  background:rgba(255,255,255,0.18);
+  backdrop-filter:blur(10px);
+
+  padding:40px 25px;
+  border-radius:25px;
+
+  text-align:center;
+
+  box-shadow:0 8px 25px rgba(0,0,0,0.2);
+
+  position:relative;
+}
+
+h1{
+  color:white;
+  margin-bottom:20px;
+
+  font-size:clamp(28px, 5vw, 38px);
+}
+
+.question{
+  color:white;
+
+  font-size:clamp(20px, 4vw, 30px);
+
+  margin-bottom:35px;
+  line-height:1.5;
+}
+
+.buttons{
+  position:relative;
+
+  width:100%;
+  height:220px;
+}
+
+button{
+  border:none;
+
+  padding:14px 30px;
+
+  border-radius:50px;
+
+  font-size:clamp(16px, 3vw, 22px);
+
+  cursor:pointer;
+
+  transition:0.3s;
+
+  font-weight:bold;
+
+  position:absolute;
+}
+
+#yesBtn{
+  background:#00c853;
+  color:white;
+
+  left:10%;
+  top:70px;
+}
+
+#yesBtn:hover{
+  transform:scale(1.08);
+}
+
+#noBtn{
+  background:#ff4d6d;
+  color:white;
+
+  right:10%;
+  top:70px;
+}
+
+#message{
+  margin-top:25px;
+  color:white;
+
+  font-size:clamp(20px, 4vw, 28px);
+
+  font-weight:bold;
+}
+
+@keyframes pop{
+
+  0%{
+    transform:scale(0.5);
+    opacity:0;
+  }
+
+  100%{
+    transform:scale(1);
+    opacity:1;
+  }
+
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+  .card{
+    padding:30px 20px;
+  }
+
+  .buttons{
+    height:260px;
+  }
+
+  button{
+    padding:12px 24px;
+  }
+
+}
